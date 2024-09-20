@@ -139,6 +139,7 @@ public class DualSenseController : MonoBehaviour
 
                 hasController = tryFindController();
                 findTimer = 0;
+                
             }
         }
         else
