@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Rainbow Lightbar Animation
   m_EditorClassIdentifier: 
   cycleSpeed: 0.35
+  freq: 0.2848587
+  highFactor: 1

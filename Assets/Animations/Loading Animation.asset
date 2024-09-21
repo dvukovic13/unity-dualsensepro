@@ -18,3 +18,6 @@ MonoBehaviour:
   - {r: 0.12135102, g: 0.2983493, b: 0.9528302, a: 1}
   - {r: 0, g: 0.086274624, b: 1, a: 1}
   shiftSpeed: 1.5
+  motorLength: 0.2
+  lowIntensity: 0
+  hiIntensity: 0.004

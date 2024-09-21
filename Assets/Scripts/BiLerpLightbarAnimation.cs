@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class BiLerpLightbarAnimation : LightbarAnimationBase
 {
-    private float timer = 0f;
     private bool lerpDirection = false;
 
     public Color lerpFromColor;
@@ -30,5 +29,11 @@ public class BiLerpLightbarAnimation : LightbarAnimationBase
 
         return returnColor;
 
+    }
+
+
+    public override void Initialize()
+    {
+        base.Initialize();
     }
 }
