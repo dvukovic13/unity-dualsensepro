@@ -6,8 +6,8 @@ using UnityEngine;
 public class HeartbeatLightbarAnimation : LightbarAnimationBase
 {
     public Color pulseColor;
-    public float beatSpeed = 1f;  // Speed of the heartbeat
-                                  // public float beatPause = 0.5f;  // Pause between beats
+    public float beatSpeed = 1f; 
+   // public float beatPause = 0.5f;  // Pause between beats
 
     private float lowRumble = 0f;
 
@@ -15,13 +15,13 @@ public class HeartbeatLightbarAnimation : LightbarAnimationBase
     {
         timer += deltaTime;
         float pulse = Mathf.PingPong(timer * beatSpeed, 1f);
-        if (pulse < 0.7f)  // Stronger pulse effect
+        if (pulse < 0.7f)  
         {
             lowRumble = 0.1f;
             return pulseColor;
         }
         lowRumble = 0f;
-        return Color.black;  // Brief pause
+        return Color.black;  
     }
 
     public override (float, float) GetRumble(float deltaTime)

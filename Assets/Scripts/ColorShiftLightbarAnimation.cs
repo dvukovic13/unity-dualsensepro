@@ -10,10 +10,10 @@ public class ColorShiftLightbarAnimation : LightbarAnimationBase
     private float motorLength = 0.1f;
 
     [SerializeField]
-    private float lowIntensity = 0.1f;
+    private float lowIntensity = 0f;
 
     [SerializeField]
-    private float hiIntensity = 0.1f;
+    private float hiIntensity = 0.001f;
 
 
     private (float, float ) rumble = (0f, 0f);
@@ -38,7 +38,6 @@ public class ColorShiftLightbarAnimation : LightbarAnimationBase
         return colors[currentColorIndex];
 
     }
-
 
     public override (float, float) GetRumble(float deltaTime)
     {

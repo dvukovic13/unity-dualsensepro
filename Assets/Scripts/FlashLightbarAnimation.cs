@@ -22,7 +22,6 @@ public class FlashAnimation : LightbarAnimationBase
     [SerializeField]
     private float highIntensity = 0.15f;
 
-
     public override Color GetColor(float deltaTime)
     {
         timer += deltaTime;
@@ -43,13 +42,9 @@ public class FlashAnimation : LightbarAnimationBase
         motorTimer += deltaTime;
 
         if (motorTimer >= (motorTime * 2))
-        {
             motorTimer = 0f;
-        }
         else if (motorTimer >= motorTime)
-        {
             return (lowIntensity, highIntensity);
-        }
         else return (0f, 0f);
 
         return (0f, 0f);
