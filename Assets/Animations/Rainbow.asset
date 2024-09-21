@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b42196b13c8014ea4e58d06c754a71, type: 3}
-  m_Name: PoliceLightbarAnimation
+  m_Script: {fileID: 11500000, guid: 4f1db28a2eccc8e46bcd53c8aae0c9a8, type: 3}
+  m_Name: Rainbow
   m_EditorClassIdentifier: 
-  colorOne: {r: 1, g: 0, b: 0, a: 1}
-  colorTwo: {r: 0, g: 0.04225111, b: 1, a: 1}
-  duration: 1
-  motorTime: 0.75
-  lowIntensity: 0
-  highIntensity: 0.005
+  cycleSpeed: 0.35
+  freq: 0.2848587
+  highFactor: 1

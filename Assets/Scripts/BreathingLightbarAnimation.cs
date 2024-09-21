@@ -5,9 +5,8 @@ using UnityEngine;
 public class BreathingLightbarAnimation : LightbarAnimationBase
 {
     public Color baseColor = Color.white;
-    public float breathSpeed = 1f;  // Speed of the breathing effect
-    public float outbreathFactor = 2f;  // Speed of the breathing effect
-    public float minAlpha = 0.2f;   // Minimum transparency for the breathing effect
+    public float breathSpeed = 0.55f;  
+    public float outbreathSpeed = 0.25f;  
 
     private bool breathDirection = true;
 
@@ -17,7 +16,7 @@ public class BreathingLightbarAnimation : LightbarAnimationBase
 
         if (breathDirection)
         {
-            timer += deltaTime * outbreathFactor;
+            timer += deltaTime * outbreathSpeed;
             rumble = 0f;
         }
         else

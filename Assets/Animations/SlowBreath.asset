@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25e158e370f04b440a21952f0ac5b222, type: 3}
-  m_Name: BidirectionalLerp
+  m_Script: {fileID: 11500000, guid: 99314fff4605e6643bab5fa3471296f7, type: 3}
+  m_Name: SlowBreath
   m_EditorClassIdentifier: 
-  lerpFromColor: {r: 1, g: 0.29473996, b: 0, a: 1}
-  lerpToColor: {r: 0.30776665, g: 0, b: 0.6901961, a: 1}
-  lerpDuration: 1.5
+  baseColor: {r: 1, g: 0.88550174, b: 0, a: 1}
+  breathSpeed: 0.55
+  outbreathFactor: 0.25
+  minAlpha: 0

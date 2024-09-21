@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1db28a2eccc8e46bcd53c8aae0c9a8, type: 3}
-  m_Name: Rainbow Lightbar Animation
+  m_Script: {fileID: 11500000, guid: 25e158e370f04b440a21952f0ac5b222, type: 3}
+  m_Name: Fade
   m_EditorClassIdentifier: 
-  cycleSpeed: 0.35
-  freq: 0.2848587
-  highFactor: 1
+  lerpFromColor: {r: 1, g: 0.29473996, b: 0, a: 1}
+  lerpToColor: {r: 0.30776665, g: 0, b: 0.6901961, a: 1}
+  lerpDuration: 1.5

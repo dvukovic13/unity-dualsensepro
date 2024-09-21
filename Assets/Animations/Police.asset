@@ -9,10 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99314fff4605e6643bab5fa3471296f7, type: 3}
-  m_Name: SlowBreathing
+  m_Script: {fileID: 11500000, guid: 97b42196b13c8014ea4e58d06c754a71, type: 3}
+  m_Name: Police
   m_EditorClassIdentifier: 
-  baseColor: {r: 1, g: 0.88550174, b: 0, a: 1}
-  breathSpeed: 0.55
-  outbreathFactor: 0.25
-  minAlpha: 0
+  colorOne: {r: 1, g: 0, b: 0, a: 1}
+  colorTwo: {r: 0, g: 0.04225111, b: 1, a: 1}
+  duration: 1
+  motorTime: 0.75
+  lowIntensity: 0
+  highIntensity: 0.005
