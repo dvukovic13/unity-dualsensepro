@@ -27,6 +27,9 @@ public class AnimationPlayer : MonoBehaviour
     {
         DualSenseGamepadHID = Gamepad.current as DualSenseGamepadHID;
         Debug.Log(DualSenseGamepadHID);
+
+        for(int i = 0; i < lightbarAnimations.Count; i++)
+            lightbarAnimations[i].Initialize();
     }
 
     // Update is called once per frame

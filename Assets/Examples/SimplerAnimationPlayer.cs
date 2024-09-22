@@ -12,13 +12,21 @@ public class SimplerAnimationPlayer : MonoBehaviour
     [SerializeField]
     private bool Rumble = false;
     [SerializeField] private LightbarAnimationBase CurrentAnimation; //= new LightbarAnimationBase();;//= new List<LightbarAnimationBase>();
+    [SerializeField] private string CurrentAnimationName = string.Empty;
     // Start is called before the first frame update
     void Start()
     {
         DualSenseGamepadHID = Gamepad.current as DualSenseGamepadHID;
         Debug.Log(DualSenseGamepadHID);
     }
-
+    private void OnValidate()
+    {
+        if(CurrentAnimation != null)
+        {
+            CurrentAnimation.Initialize();
+            CurrentAnimationName = CurrentAnimation.name;
+        }
+    }
     // Update is called once per frame
     void Update()
     {

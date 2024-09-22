@@ -69,3 +69,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rumble: 0
   CurrentAnimation: {fileID: 0}
+  CurrentAnimationName: 

@@ -21,4 +21,10 @@ public abstract class LightbarAnimationBase : ScriptableObject
         motorTimer = 0f;
         return;
     }
+
+
+    private void Awake()
+    {
+        Initialize();
+    }
 }
