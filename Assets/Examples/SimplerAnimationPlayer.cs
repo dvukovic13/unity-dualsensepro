@@ -3,25 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.DualShock;
+using UnityEngine.InputSystem.LowLevel;
 
 public class SimplerAnimationPlayer : MonoBehaviour
 {
+
     [SerializeField]
-    private DualSenseGamepadHID DualSenseGamepadHID = null;
+    private DualSenseController dualSenseController;
 
     [SerializeField]
     private bool Rumble = false;
     [SerializeField] private LightbarAnimationBase CurrentAnimation; //= new LightbarAnimationBase();;//= new List<LightbarAnimationBase>();
     [SerializeField] private string CurrentAnimationName = string.Empty;
+
+    [SerializeField]
+    private bool searchForController = true;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        DualSenseGamepadHID = Gamepad.current as DualSenseGamepadHID;
-        Debug.Log(DualSenseGamepadHID);
+      
     }
     private void OnValidate()
     {
-        if(CurrentAnimation != null)
+        if (CurrentAnimation != null)
         {
             CurrentAnimation.Initialize();
             CurrentAnimationName = CurrentAnimation.name;
@@ -30,14 +36,16 @@ public class SimplerAnimationPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (DualSenseGamepadHID != null && CurrentAnimation != null)
+       
+
+        if (dualSenseController.GetDualSense != null && CurrentAnimation != null)
         {
             // DualSenseGamepadHID.SetLightBarColor(CurrentAnimation.GetColor(Time.deltaTime));
 
             (float lowfreq, float highfreq) = (CurrentAnimation.GetRumble(Time.deltaTime).Item1, CurrentAnimation.GetRumble(Time.deltaTime).Item2);
             Color color = CurrentAnimation.GetColor(Time.deltaTime);
 
-            DualSenseGamepadHID.SetMotorSpeedsAndLightBarColor(Rumble ? lowfreq : 0f, Rumble ? highfreq : 0f, color);
+            dualSenseController.GetDualSense.SetMotorSpeedsAndLightBarColor(Rumble ? lowfreq : 0f, Rumble ? highfreq : 0f, color);
         }
     }
 }

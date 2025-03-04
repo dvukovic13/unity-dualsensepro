@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 304775300230300150}
+  - component: {fileID: 2001730798329114596}
   - component: {fileID: 189774723442754376}
   - component: {fileID: 8004403939572634735}
   m_Layer: 0
@@ -33,6 +34,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2001730798329114596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6016206488591468331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a2c698165a31347accdfcd4bcd48d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &189774723442754376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,7 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25e8b6bc5a2e01a4c9cafcd17da3a4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rumble: 0
+  dualSenseController: {fileID: 2001730798329114596}
+  Rumble: 1
   animIndex: 0
   lightbarAnimations:
   - {fileID: 11400000, guid: 6763b0739d8f3fb43b764cce000dd318, type: 2}
@@ -67,6 +81,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09f45e4cf0f7d424d913246be745a32d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dualSenseController: {fileID: 2001730798329114596}
   Rumble: 0
   CurrentAnimation: {fileID: 0}
   CurrentAnimationName: 
+  searchForController: 1

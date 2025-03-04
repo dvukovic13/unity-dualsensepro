@@ -7,8 +7,7 @@ using UnityEngine.InputSystem.DualShock;
 public class AnimationPlayer : MonoBehaviour
 {
     [SerializeField]
-    private DualSenseGamepadHID DualSenseGamepadHID = null;
-
+    private DualSenseController dualSenseController = null;
 
     [SerializeField]
     private bool Rumble = false;
@@ -20,25 +19,20 @@ public class AnimationPlayer : MonoBehaviour
     [SerializeField] private List<LightbarAnimationBase> lightbarAnimations = new List<LightbarAnimationBase>();
 
 
-   
-
     // Start is called before the first frame update
     void Start()
     {
-        DualSenseGamepadHID = Gamepad.current as DualSenseGamepadHID;
-        Debug.Log(DualSenseGamepadHID);
-
-        for(int i = 0; i < lightbarAnimations.Count; i++)
+        for (int i = 0; i < lightbarAnimations.Count; i++)
             lightbarAnimations[i].Initialize();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (DualSenseGamepadHID != null) {
+        if (dualSenseController.GetDualSense != null) {
             (float lowfreq, float hifreq) = (lightbarAnimations[animIndex].GetRumble(Time.deltaTime).Item1, lightbarAnimations[animIndex].GetRumble(Time.deltaTime).Item2);
             Color color = lightbarAnimations[animIndex].GetColor(Time.deltaTime);
-            DualSenseGamepadHID.SetMotorSpeedsAndLightBarColor(Rumble ? lowfreq : 0f, Rumble ? hifreq : 0f, color);
+            dualSenseController.GetDualSense.SetMotorSpeedsAndLightBarColor(Rumble ? lowfreq : 0f, Rumble ? hifreq : 0f, color);
         }
     }
 }

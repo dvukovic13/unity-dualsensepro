@@ -38,8 +38,6 @@ public class BreathingLightbarAnimation : LightbarAnimationBase
 
         return Color.Lerp(baseColor, Color.black, timer);
 
-       // float alpha = Mathf.PingPong(timer * breathSpeed, 1f) * (1f - minAlpha) + minAlpha;
-       // return new Color(baseColor.r, baseColor.g, baseColor.b, alpha);
     }
 
     public override (float, float) GetRumble(float deltaTime)

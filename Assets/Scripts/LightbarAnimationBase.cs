@@ -16,9 +16,8 @@ public abstract class LightbarAnimationBase : ScriptableObject
 
     public virtual void Initialize()
     {
-        Debug.Log("initialized!");
-        timer = 0f;
-        motorTimer = 0f;
+        ResetTimers();
+        //Debug.Log("initialized!");
         return;
     }
 
@@ -26,5 +25,11 @@ public abstract class LightbarAnimationBase : ScriptableObject
     private void Awake()
     {
         Initialize();
+    }
+
+    public virtual void ResetTimers()
+    {
+        timer = 0f;
+        motorTimer = 0f;
     }
 }
